@@ -71,6 +71,16 @@ body {
   transform: scale(1.2);
 }
 
+#tgButton img {
+  /* Color filter to make the logo white */
+  filter: invert(100%) sepia(0) saturate(0) hue-rotate(100deg);
+   filter: invert(100%) sepia(100%) saturate(0) hue-rotate(180deg) drop-shadow(0 0 1px #ffffff) drop-shadow(0 0 10px #ffffff);
+}
+
+#tgButton:hover {
+  transform: scale(1.2);
+}
+
 /* Responsive Fixes */
 @media (max-width: 768px) {
   body {
