@@ -1,22 +1,26 @@
 /* General Reset */
-body {
+* {
   margin: 0;
   padding: 0;
-  background: #000000; /* Completely black background */
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
   color: white;
   font-family: 'Fantasy', copperplate;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
   text-align: center;
+  padding: 20px;
 }
 
 /* Centered Main Element */
 #neurabot {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -25,62 +29,52 @@ body {
   cursor: pointer;
   opacity: 0.9;
   transition: transform 0.3s ease-in-out, font-size 0.3s ease-in-out;
+  padding: 10px;
 }
 
 #neurabot:active {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 /* Explanation Box */
 #explanation {
-  width: 80%;
+  width: 90%;
   max-width: 600px;
-  font-size: 1rem;
+  font-size: clamp(1rem, 3vw, 1.5rem);
   color: #ffffff;
   text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #ffffff, 0 0 70px #ffffff, 0 0 80px #ffffff, 0 0 100px #ffffff, 0 0 150px #ffffff;
   display: none;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
+  margin-top: 20px;
 }
 
 #explanation.show {
   display: block;
   opacity: 1;
-  font-size: 1.5rem;
 }
 
 /* Buttons */
 #xButton, #tgButton {
-  position: fixed;
-  bottom: 10%;
-  padding: 10px;
+  position: relative;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
   background: none;
+  color: white;
   cursor: pointer;
-  z-index: 11;
+  text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff;
   transition: transform 0.3s ease-in-out;
 }
 
-#xButton {
-  right: 10%;
-  font-size: 1.5rem;
+#xButton:hover, #tgButton:hover {
+  transform: scale(1.2);
 }
 
-#tgButton {
-  left: 10%;
-}
-
-#tgButton img {
-  filter: invert(100%) sepia(100%) saturate(0) hue-rotate(180deg) drop-shadow(0 0 1px #ffffff) drop-shadow(0 0 10px #ffffff);
-}
-
-#tgButton:hover, #xButton:hover {
-  transform: scale(1.3);
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
+/* Responsive Fixes */
+@media (max-width: 768px) {
   body {
-    font-size: 14px;
+    padding: 10px;
   }
 
   #neurabot {
@@ -89,11 +83,10 @@ body {
 
   #explanation {
     font-size: 1rem;
-    width: 90%;
   }
 
   #xButton, #tgButton {
-    bottom: 5%;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    padding: 8px 16px;
   }
 }
