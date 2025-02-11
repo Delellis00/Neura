@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background: #000000; /* Completely black background */
+  color: white;
+  font-family: 'Fantasy', copperplate;
+}
+
+#neurabot {
+  position: absolute;
+  top: 31%;
+  left: 60%;
+  transform: translateX(-60%);
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ffffff; /* White neon color */
+  text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #ffffff, 0 0 70px #ffffff, 0 0 80px #ffffff, 0 0 100px #ffffff, 0 0 150px #ffffff;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0.9;
+  transition: transform 0.3s ease-in-out, font-size 0.3s ease-in-out;
+}
+
+#neurabot:active {
+  transform: scale(1.2);
+}
+
+#explanation {
+  position: absolute;
+  top: 0%;
+  left: 10%;
+  transform: translateX(-60%);
+  width: 80%;
+  max-width: 600px;
+  text-align: left;
+  font-size: 1rem;
+  color: #ffffff; /* White neon color */
+  text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #ffffff, 0 0 70px #ffffff, 0 0 80px #ffffff, 0 0 100px #ffffff, 0 0 150px #ffffff;
+  display: none;
+  z-index: 9;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, left 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+#explanation.show {
+  display: block;
+  opacity: 1;
+  left: 10%;
+  transform: translateX(-20%);
+  font-size: 1.5rem;
+}
+
+#explanation p:last-child {
+  margin-top: 2em;
+}
+
+/* Styling for the X button */
+#xButton {
+  position: absolute;
+  bottom: 570px;
+  right: 12px;
+  padding: 10px 20px;
+  background: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+  text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #ffffff, 0 0 70px #ffffff, 0 0 80px #ffffff, 0 0 100px #ffffff, 0 0 150px #ffffff;
+  cursor: pointer;
+  z-index: 11;
+  transition: transform 0.3s ease-in-out;
+}
+
+#xButton:hover {
+  transform: scale(1.3);
+}
+/* Styling for the Telegram button */
+#tgButton {
+  position: absolute;
+  bottom: 520px;
+  right: 15px; /* Adjust this value based on your layout, ensuring it doesn't overlap with the X button */
+  padding: 10px;
+  background: none;
+  cursor: pointer;
+  z-index: 11;
+  transition: transform 0.3s ease-in-out;
+}
+
+#tgButton img {
+  /* Color filter to make the logo white */
+  filter: invert(100%) sepia(0) saturate(0) hue-rotate(100deg);
+   filter: invert(100%) sepia(100%) saturate(0) hue-rotate(180deg) drop-shadow(0 0 1px #ffffff) drop-shadow(0 0 10px #ffffff);
+}
+
+#tgButton:hover {
+  transform: scale(1.2);
+}
