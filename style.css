@@ -90,3 +90,14 @@ body {
     padding: 8px 16px;
   }
 }
+.container {
+  width: 100%;
+  max-width: 90vw;
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
